@@ -1,0 +1,84 @@
+/* Initialize */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-size: 10px;
+}
+a,
+li {
+    text-decoration: none;
+}
+
+/* Header */
+/*
+#toggle {
+    display:none;
+}*/
+
+#header-container {
+    /* 배경 및 높이 지정 */
+    height: 45px;
+    background: linear-gradient(to bottom, #e66465, #9198e5);
+
+    /* 내부 아이템 레이아웃 지정 */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header-left-button,
+#header-right-button{
+    width: 45px;
+    height: 45px;
+}
+#header-left-button{
+    padding: 10px;
+}
+#header-right-button{
+    padding: 7px;
+}
+#header-left-button-container{
+    margin-left: 7.5px;
+}
+#header-left-button-container > a{
+    /* 텍스트가 화면상에 보이지 않도록 적용하는 코드 */
+    font-size: 0px;
+}
+#header-right-button-container{
+    margin-right: 7.5px;
+
+    /* 텍스트가 화면상에 보이지 않도록 적용하는 코드 */
+    font-size: 0px;
+}
+
+/* toggle */
+#toggle-nav-container{
+    background: #363636;
+    padding: 15px;
+}
+div#toggle-nav-container {
+    display: none;
+}
+
+#toggle:checked + #toggle-nav-container {
+    display: block;
+}
+
+/* navigation 1 */
+
+
+/* navigation 2 */
+
+
+/* main */
+
+
+/* footer */
+
+
