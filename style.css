@@ -5,6 +5,8 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+
+    font-family: 'Roboto', sans-serif;
 }
 body {
     font-size: 10px;
@@ -15,15 +17,10 @@ li {
 }
 
 /* Header */
-/*
-#toggle {
-    display:none;
-}*/
-
 #header-container {
     /* 배경 및 높이 지정 */
     height: 45px;
-    background: linear-gradient(to bottom, #e66465, #9198e5);
+    background: wheat;
 
     /* 내부 아이템 레이아웃 지정 */
     display: flex;
@@ -32,42 +29,102 @@ li {
     align-items: center;
 }
 
-#header-left-button,
-#header-right-button{
+#header-title {
+    color: black;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+#header-left-container,
+#header-right-container {
+    font-size: 0px;
+    width: 45px;
+}
+
+#header-left-button {
+    /* 홈 아이콘 사이즈 설정 */
+    width: 25px;
+    height: 25px;
+
+    /* 홈 아이콘 상하좌우 여백 간격 맞춤 */
+    margin-left: 10px;
+}
+
+#header-right-button {
+    /* 토글 메뉴 아이콘 이미지와 사이즈 설정 */
+    background-image: url(./list.svg);
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* 토글 메뉴 아이콘 상하좌우 여백 간격 맞춤 */
     width: 45px;
     height: 45px;
-}
-#header-left-button{
-    padding: 10px;
-}
-#header-right-button{
-    padding: 7px;
-}
-#header-left-button-container{
-    margin-left: 7.5px;
-}
-#header-left-button-container > a{
-    /* 텍스트가 화면상에 보이지 않도록 적용하는 코드 */
-    font-size: 0px;
-}
-#header-right-button-container{
-    margin-right: 7.5px;
-
-    /* 텍스트가 화면상에 보이지 않도록 적용하는 코드 */
-    font-size: 0px;
+    cursor: pointer;
+    z-index: 999;
+    
+    /* 전환 시간 */
+    transition: 0.3s;
 }
 
-/* toggle */
-#toggle-nav-container{
-    background: #363636;
-    padding: 15px;
+#header-right-button.active {
+    /* 토글 메뉴 아이콘 이미지와 사이즈 설정 */
+    background-image: url(./undo.svg);
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* 토글 메뉴 아이콘 상하좌우 여백 간격 맞춤 */
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    z-index: 999;
+    
+    /* 전환 시간 */
+    transition: 0.3s;
 }
-div#toggle-nav-container {
+
+/* toggle menu */
+#toggle-container {
     display: none;
 }
 
-#toggle:checked + #toggle-nav-container {
+#toggle-container.active {
     display: block;
+}
+
+.toggle-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.toggle-item {
+    background-color: peachpuff;
+
+    display: flex;
+    align-items: center;
+
+    width: 50%;
+
+    color: black;
+}
+
+.toggle-item:hover {
+    background-color: bisque;
+    color: grey;
+}
+
+.toggle-item > a{
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+    color: inherit;
+}
+
+.toggle-item-desc {
+    padding-left: 15px;
+    font-size: 1.3rem;
+    color: inherit;
 }
 
 /* navigation 1 */
@@ -77,7 +134,34 @@ div#toggle-nav-container {
 
 
 /* main */
+#main-container {
+    padding: 0px 15px;
+    margin: 15px 0px;
+}
 
+.article-container{
+    margin: inherit;
+}
+
+.article-title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 65px;
+}
+
+.article-title {
+    font-size: 1.2rem;
+}
+
+.article-info {
+    font-size: 1.0rem;
+    font-weight: normal;
+}
+
+.article-desc {
+    font-size: 1.0rem;
+}
 
 /* footer */
 

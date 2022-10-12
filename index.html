@@ -5,44 +5,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
   <body>
     <div id="wrap">
-      <input id="toggle" type="checkbox" />
       <header id="header-container">
-        <div id="header-left-button-container">
-          <a href="#">
-            <img
-              id="header-left-button"
-              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6c2VyaWY9Imh0dHA6Ly93d3cuc2VyaWYuY29tLyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIHNlcmlmOmlkPSJzaGFwZSAxMCIgZD0iTTE5IDBoLTE0Yy0yLjc2IDAtNSAyLjIzOS01IDV2MTRjMCAyLjc2IDIuMjM5IDUgNSA1aDE0YzIuNzU5IDAgNS0yLjIzOSA1LTV2LTE0YzAtMi43Ni0yLjIzOS01LTUtNW0wIDJjMS42NiAwIDMgMS4zNDUgMyAzdjE0YzAgMS42NTQtMS4zMzggMy0zIDNoLTE0Yy0xLjY1NCAwLTMtMS4zMzktMy0zdi0xNGMwLTEuNjU4IDEuMzQyLTMgMy0zaDE0eiIvPjwvc3ZnPg=="
-            />
-            Main
-          </a>
-        </div>
+        <a href="./index.html" id="header-left-container">
+          <img src="./home.svg" alt="Main" id="header-left-button" />
+        </a>
         <h1 id="header-title">Mobile</h1>
-        <label for="toggle" id="header-right-button-container">
-          <img
-            id="header-right-button"
-            src="data:image/svg+xml;base64,PHN2ZyBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjIiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJtMjEgNGMwLS40NzgtLjM3OS0xLTEtMWgtMTZjLS42MiAwLTEgLjUxOS0xIDF2MTZjMCAuNjIxLjUyIDEgMSAxaDE2Yy40NzggMCAxLS4zNzkgMS0xem0tNCAxMS4yNWMwIC40MTQtLjMzNi43NS0uNzUuNzVoLTguNWMtLjQxNCAwLS43NS0uMzM2LS43NS0uNzVzLjMzNi0uNzUuNzUtLjc1aDguNWMuNDE0IDAgLjc1LjMzNi43NS43NXptMC0zLjI0OGMwIC40MTQtLjMzNi43NS0uNzUuNzVoLTguNWMtLjQxNCAwLS43NS0uMzM2LS43NS0uNzVzLjMzNi0uNzUuNzUtLjc1aDguNWMuNDE0IDAgLjc1LjMzNi43NS43NXptMC0zLjI1MmMwIC40MTQtLjMzNi43NS0uNzUuNzVoLTguNWMtLjQxNCAwLS43NS0uMzM2LS43NS0uNzVzLjMzNi0uNzUuNzUtLjc1aDguNWMuNDE0IDAgLjc1LjMzNi43NS43NXoiIGZpbGwtcnVsZT0ibm9uemVybyIvPjwvc3ZnPg=="
-          />
-          Toggle
-        </label>
-      </header>
-      <div class="toggle-wrap">
-        <div id="toggle-nav-container">
-          <ul id="toggle-nav-list">
-            <li class="toggle-nav-item"><a href="#">Button</a></li>
-            <li class="toggle-nav-item"><a href="#">Button</a></li>
-            <li class="toggle-nav-item"><a href="#">Button</a></li>
-            <li class="toggle-nav-item"><a href="#">Button</a></li>
-            <li class="toggle-nav-item"><a href="#">Button</a></li>
-            <li class="toggle-nav-item"><a href="#">Button</a></li>
-            <li class="toggle-nav-item"><a href="#">Button</a></li>
-            <li class="toggle-nav-item"><a href="#">Button</a></li>
-          </ul>
+        <div id="header-right-container">
+          <div id="header-right-button" class="" onclick="toggleMenu();"></div>
         </div>
+      </header>
+      <div id="toggle-container">
+        <ul class="toggle-list">
+          <li class="toggle-item">
+            <a href="#"><p class="toggle-item-desc">Button</p></a>
+          </li>
+          <li class="toggle-item">
+            <a href="#"><p class="toggle-item-desc">Button</p></a>
+          </li>
+          <li class="toggle-item">
+            <a href="#"><p class="toggle-item-desc">Button</p></a>
+          </li>
+          <li class="toggle-item">
+            <a href="#"><p class="toggle-item-desc">Button</p></a>
+          </li>
+          <li class="toggle-item">
+            <a href="#"><p class="toggle-item-desc">Button</p></a>
+          </li>
+          <li class="toggle-item">
+            <a href="#"><p class="toggle-item-desc">Button</p></a>
+          </li>
+          <li class="toggle-item">
+            <a href="#"><p class="toggle-item-desc">Button</p></a>
+          </li>
+          <li class="toggle-item">
+            <a href="#"><p class="toggle-item-desc">Button</p></a>
+          </li>
+        </ul>
       </div>
+
+      <main id="main-container">
+        <article class="article-container">
+          <div class="article-title-container">
+            <h1 class="article-title">Lorem Ipsum</h1>
+            <h2 class="article-info">2022-10-12 - Wednesday</h2>
+          </div>
+          <p class="article-desc">
+            Integer auctor, neque in condimentum pharetra, nulla massa eleifend
+            nibh, sed consectetur elit mauris sagittis est. Nullam ex nulla,
+            efficitur sit amet pellentesque sit amet, dapibus id odio. Nam
+            molestie convallis magna vitae fringilla. Suspendisse aliquet massa
+            faucibus, fringilla eros a, laoreet eros. Aliquam tristique suscipit
+            dui eget sagittis. Donec pharetra massa eu massa lobortis ornare.
+            Morbi ornare urna et nulla rhoncus, eu congue turpis gravida.
+            Pellentesque habitant morbi tristique senectus et netus et malesuada
+            fames ac turpis egestas. Curabitur vel bibendum ipsum, quis lacinia
+            orci. Suspendisse eleifend lobortis velit ac placerat. Nam eu
+            pellentesque metus. Aenean sed est sit amet sapien malesuada
+            lobortis ut eu ligula. Proin ullamcorper tortor vitae nunc euismod,
+            vel cursus nibh scelerisque. In posuere dolor eu odio feugiat porta.
+          </p>
+        </article>
+      </main>
     </div>
+    <script type="text/javascript" src="./script.js"></script>
   </body>
 </html>
